@@ -1,0 +1,45 @@
+C:\Users\legal\source\repos\PUF E-voting System\bin\Debug\PUF E-voting System.exe.config
+C:\Users\legal\source\repos\PUF E-voting System\bin\Debug\PUF E-voting System.exe
+C:\Users\legal\source\repos\PUF E-voting System\bin\Debug\PUF E-voting System.pdb
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\PUF E-voting System.csproj.AssemblyReference.cache
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\MainWindow.g.cs
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\App.g.cs
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\PUF E-voting System_MarkupCompile.cache
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\PUF E-voting System_MarkupCompile.lref
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\MainWindow.baml
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\PUF E-voting System.g.resources
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\PUF_E_voting_System.Properties.Resources.resources
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\PUF E-voting System.csproj.GenerateResource.cache
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\PUF E-voting System.csproj.CoreCompileInputs.cache
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\PUF E-voting System.exe
+C:\Users\legal\source\repos\PUF E-voting System\obj\Debug\PUF E-voting System.pdb
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\bin\Debug\PUF E-voting System.exe.config
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\bin\Debug\PUF E-voting System.exe
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\bin\Debug\PUF E-voting System.pdb
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.csproj.AssemblyReference.cache
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\MainWindow.g.cs
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\App.g.cs
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System_MarkupCompile.cache
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System_MarkupCompile.lref
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\MainWindow.baml
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.g.resources
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF_E_voting_System.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.csproj.GenerateResource.cache
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.exe
+C:\Users\user\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.pdb
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\bin\Debug\PUF E-voting System.exe.config
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\bin\Debug\PUF E-voting System.exe
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\bin\Debug\PUF E-voting System.pdb
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.csproj.AssemblyReference.cache
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\MainWindow.g.cs
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\App.g.cs
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System_MarkupCompile.cache
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System_MarkupCompile.lref
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\MainWindow.baml
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.g.resources
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF_E_voting_System.Properties.Resources.resources
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.csproj.GenerateResource.cache
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.csproj.CoreCompileInputs.cache
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.exe
+C:\Users\legal\Documents\GitHub\Project\exe\PUF E-voting System - 複製\obj\Debug\PUF E-voting System.pdb

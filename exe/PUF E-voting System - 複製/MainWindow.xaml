@@ -1,0 +1,65 @@
+﻿<Window x:Class="PUF_E_voting_System.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PUF_E_voting_System"
+        mc:Ignorable="d"
+        Title="NTUST PUF E-voting System" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row ="0" Grid.RowSpan="2" BorderThickness="2" CornerRadius="1" BorderBrush="#FF57A2FF" Background="AliceBlue">
+            <WrapPanel HorizontalAlignment="Center" Orientation="Vertical"  Margin="0,10">
+
+                <Button BorderThickness="2"  Width="90" Height="90" Margin="10,0,10,0" Click="Click_A" >
+                    <Image Source="1.jpg" Cursor="Hand" ></Image>
+                </Button>
+                <TextBox HorizontalAlignment="Center" Margin="10,0" BorderThickness="0" Background="{x:Null}" >King Lee</TextBox>
+                <Button BorderThickness="2" Width="90" Height="90" Margin="10,20,10,0" Click="Click_B">
+                    <Image Source="2.jpg" Cursor="Hand"></Image>
+                </Button>
+                <TextBox HorizontalAlignment="Center" Margin="10,0" BorderThickness="0" Background="{x:Null}">Teacher Huang</TextBox>
+                <Button BorderThickness="2" Width="90" Height="90" Margin="10,20,10,0" Click="Click_C">
+                    <Image Source="3.jpg" Cursor="Hand"></Image>
+                </Button>
+                <TextBox HorizontalAlignment="Center" Margin="10,0" BorderThickness="0" Background="{x:Null}">Student Chu</TextBox>
+            </WrapPanel>
+        </Border>
+        <StackPanel Grid.Column="1" Grid.Row="0" Width="645">
+            
+            <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="2">
+                <StackPanel Background="#FF95C9D9" Height="367" Margin="0.4,0,0.2,0">
+                    <Border Margin="40,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="2" BorderBrush="Black" CornerRadius="2" >
+                        <Image HorizontalAlignment="Left" Source="1.jpg" Width="100" Height="100" Name="beefPic"></Image>
+                    </Border>
+                    <TextBlock Padding="30"  Name="beef" FontSize="22" Text="姓名：King Lee" Background="#FF95C9D9"/>
+                </StackPanel>
+                
+            </Border>
+
+        </StackPanel>
+        <Border Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="2" Background="#FF5FB3CD">
+            <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal">
+                <WrapPanel>
+                    <TextBox Height="30" TextWrapping="Wrap"  FontSize="24" VerticalAlignment="Center" FontWeight="Bold" BorderThickness="0" Background="{x:Null}" Margin="0,10,13,10">支持 : </TextBox>
+                    <TextBox Height="30" TextWrapping="Wrap" Name="candidate" FontSize="24" VerticalAlignment="Center" FontWeight="Bold" BorderThickness="0" Background="{x:Null}" Margin="0,0,13,0">King Lee</TextBox>
+                </WrapPanel>
+                
+                <Button Margin="3"  Padding="3" FontSize="26" Width="100" Click="Click_Submit">投票</Button>
+            </StackPanel>
+        </Border>
+        
+
+
+
+    </Grid>
+
+</Window>
