@@ -9,7 +9,7 @@ using System.Windows;
 namespace PUF_E_voting_System
 {
     /// <summary>
-    /// App.xaml 的互動邏輯
+    /// 
     /// </summary>
     public partial class App : Application
     {

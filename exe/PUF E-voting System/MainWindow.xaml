@@ -22,7 +22,7 @@
         </StackPanel>
         <StackPanel>
             <WrapPanel Margin="0,50,0,0" HorizontalAlignment="Center">
-                <TextBlock  Text="您想要投的對象為 : ">
+                <TextBlock  Text="You want to vote for : ">
 
                 </TextBlock>
                 <TextBlock x:Name="candidate">
@@ -30,7 +30,7 @@
                 </TextBlock>
             </WrapPanel>
             
-            <Button  Width="100" Height="50" Content="送出" Margin="600,80,0,0" Click="Click_Submit">
+            <Button  Width="100" Height="50" Content="send" Margin="600,80,0,0" Click="Click_Submit">
 
             </Button>
         </StackPanel>

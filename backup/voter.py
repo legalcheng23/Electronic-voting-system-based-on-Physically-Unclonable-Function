@@ -12,7 +12,7 @@ port_votes_calculator = 8001
 
 
 def vote():
-    print("您想要投的對象是？\n1.黃老師\n2.羅老師\n3.查老師\n請輸入數字投票")
+    print("Who do you want to vote for? \n1.Mr. Wong\n2.Mr. Law\n3.Mr. Cha\n Please input the number to vote")
     person = input()
     return {
         '1': "1",
@@ -48,7 +48,7 @@ def send_vote(signature, data):
 
     # send the size of following message
     length_of_public_key = len(str(keyPairs[0][0]).encode())
-    client.sendall(str(length_of_public_key).zfill(4).encode())  # 不足位數補0
+    client.sendall(str(length_of_public_key).zfill(4).encode())  # Insufficient bits to make up 0
 
     # send public key to server
     out_to_server_stream = str(keyPairs[0][0])
@@ -56,7 +56,7 @@ def send_vote(signature, data):
 
     # send the size of following message
     length_of_signature = len(signature)
-    client.sendall(str(length_of_signature).zfill(4).encode())  # 不足位數補0
+    client.sendall(str(length_of_signature).zfill(4).encode())  # Insufficient bits to make up 0
 
     # send signature to server
     out_to_server_stream = signature
@@ -71,7 +71,7 @@ def send_vote(signature, data):
     client.sendall(out_to_server_stream)
 
 
-# 取得投票號碼
+
 vote = vote()
 # str to bytes
 data = str.encode(vote)

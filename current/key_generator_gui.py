@@ -8,7 +8,6 @@ import tkinter as tk
 import threading
 import base64
 
-# 保護金鑰的密碼
 secretCode = 'project'
 
 # dictionary, key = hash of public key, value = tuple of public and private key
@@ -24,7 +23,7 @@ label1.grid(row=1)
 
 
 def generate_key():
-    # 產生1024位元的RSA金鑰
+
     random_generator = Random.new().read
     rsa_key = RSA.generate(2048)
 

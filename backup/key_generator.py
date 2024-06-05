@@ -3,7 +3,6 @@ from Crypto import PublicKey
 from Crypto.PublicKey import RSA
 import socket
 
-# 保護金鑰的密碼
 secretCode = 'project'
 
 # dictionary, key = hash of public key, value = tuple of public and private key
@@ -12,7 +11,6 @@ keyDict = {}
 
 def generate_key():
     print('generate new key')
-    # 產生1024位元的RSA金鑰
     random_generator = Random.new().read
     rsa_key = RSA.generate(1024)
 

@@ -5,7 +5,6 @@ from PIL import Image, ImageTk
 conn = MongoClient()
 
 db = conn.local
-# vote_result 可能需要調整
 collection = db.vote_result
 collection.stats
 
@@ -13,7 +12,7 @@ candidate_1 = 'King Lee'
 candidate_2 = 'Teacher Huang'
 candidate_3 = 'Student Chu'
 window = tk.Tk()
-window.title('開票')
+window.title('invoicing')
 window.geometry('500x300')
 txt1 = ''
 txt2 = ''
@@ -21,17 +20,17 @@ txt3 = ''
 
 cursor = collection.find_one({'candidate':candidate_1})
 if cursor is not None:
-    txt1 = ' '+candidate_1+'\n得票數: '+str(cursor['votes'])
+    txt1 = ' '+candidate_1+'\nNumber of votes: '+str(cursor['votes'])
     pass
 
 cursor = collection.find_one({'candidate':candidate_2})
 if cursor is not None:
-    txt2 = ' '+candidate_2+'\n得票數: '+str(cursor['votes'])
+    txt2 = ' '+candidate_2+'\nNumber of votes: '+str(cursor['votes'])
     pass
 
 cursor = collection.find_one({'candidate':candidate_3})
 if cursor is not None:
-    txt3 = ' '+candidate_3+'\n得票數: '+str(cursor['votes'])
+    txt3 = ' '+candidate_3+'\nNumber of votes: '+str(cursor['votes'])
     pass
 
 img1 = Image.open('./pic/1.jpg')

@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace PUF_E_voting_System
 {
     /// <summary>
-    /// MainWindow.xaml 的互動邏輯
+    /// 
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -34,9 +34,9 @@ namespace PUF_E_voting_System
                 serialPort1.BaudRate = 9600;
                 serialPort1.DataBits = 8;
                 serialPort1.PortName = "COM2";
-                //兩個停止位
+                
                 serialPort1.StopBits = System.IO.Ports.StopBits.One;
-                //無奇偶校驗位
+                
                 serialPort1.Parity = System.IO.Ports.Parity.None;
                 serialPort1.ReadTimeout = 100;
                 serialPort1.Open();
@@ -66,7 +66,7 @@ namespace PUF_E_voting_System
         {
             if (candidate.Text != "")
             {
-                String total = "您確定要投給 " + candidate.Text + "嗎?";
+                String total = "Are you sure you want to vote for " + candidate.Text + "?";
                 if (MessageBox.Show(total,
                          "Vote Information",
                          MessageBoxButton.YesNo,
@@ -79,7 +79,7 @@ namespace PUF_E_voting_System
             }
             else
             {
-                MessageBox.Show("請選擇一位候選人", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Please select a candidate", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }

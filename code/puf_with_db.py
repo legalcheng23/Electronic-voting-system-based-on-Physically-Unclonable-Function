@@ -7,28 +7,26 @@ from bson.objectid import ObjectId
 import datetime
 import subprocess
 import base64
-COM_PORT = 'COM4'    # 指定通訊埠名稱 uid
-BAUD_RATES = 9600    # 設定傳輸速率
-ser = serial.Serial(COM_PORT, BAUD_RATES)   # 初始化序列通訊埠
+COM_PORT = 'COM4'    
+BAUD_RATES = 9600    
+ser = serial.Serial(COM_PORT, BAUD_RATES) 
 ser1=serial.Serial('COM3',9600) # puf
 candidate_1 = 'King Lee'
 candidate_2 = 'Teacher Huang'
 candidate_3 = 'Student Chu'
 
-# 前置設定, db名稱為local, collection名稱為mymongodb
 conn = MongoClient()
 db = conn.local
-collection_vote_record = db.vote_record # 存投票結果
-collection_PUF=db.mypuf_num # 存puf
-collection_vote_result = db.vote_result # 存候選人票數
-c2 = db.uid_legal #存uid合法名單
+collection_vote_record = db.vote_record 
+collection_PUF=db.mypuf_num 
+collection_vote_result = db.vote_result 
+c2 = db.uid_legal 
 
 collection_vote_record.stats
 collection_PUF.stats
 c2.stats
 collection_vote_result.stats
 
-# 初始化投票結果
 cursor = collection_vote_result.find_one({'candidate':candidate_1})
 if cursor is None:
     collection_vote_result.insert_one({'candidate':candidate_1, 'votes':0})
@@ -47,16 +45,16 @@ if cursor is None:
 def UID():
     try:
         while True:
-            while ser.in_waiting:          # 若收到序列資料…
-                data_raw = ser.readline()  # 讀取一行
-                data = data_raw.decode().strip()   # 用預設的UTF-8解碼
+            while ser.in_waiting:          
+                data_raw = ser.readline()  
+                data = data_raw.decode().strip()   
                 base64_uid=base64.b64encode(data.encode('UTF-8'))
                 cursor_uid = collection_vote_record.find_one({'uid':base64_uid})
                 if cursor_uid is None:
                     cursor = c2.find_one({'uid':data})
                     if cursor is not None:
                         print('legal!')
-                        str = 'C:\\Users\\legal\\Documents\\GitHub\\Project\\exe\\PUF E-voting System.exe'
+                        str = 'PUF E-voting System.exe'
                         win32api.ShellExecute(0,'open',str,'','',1)
                         while True:
                             out=subprocess.call('tasklist |find /i"PUF_E-voting_System.exe"',shell=True)
@@ -66,12 +64,12 @@ def UID():
                         print(data)
                         print('not legal!')  
                 else:
-                    win32api.MessageBox(0,"此用戶已投過票","注意")
+                    win32api.MessageBox(0,"This user has already voted","!!")
                     return 0
                                 
     except ValueError:
-        ser.close()    # 清除序列通訊物件
-        print('再見！')
+        ser.close()   
+        print('bye！')
 
 def PUF():
     try:
@@ -88,8 +86,8 @@ def PUF():
                 print(data1)
                 return data1
     except ValueError:
-        ser1.close()    # 清除序列通訊物件
-        print('再見！')
+        ser1.close()   
+        print('bye！')
 
 def hashpuf(Puf,candidate):
     BinaryString = ''
@@ -137,7 +135,6 @@ def main():
     print('uid: ' +uid)
     print('result: ')
     print(puf_candidate_support)
-    # 檢查該uid有沒有存在過資料庫
 
     cursor = collection_vote_record.find_one({'uid':base64_uid})
     cursor2 = collection_vote_result.find_one({'candidate':candidate})
@@ -159,7 +156,7 @@ def puf_vote(puf,uid,candidate):
     tmp3 = hashpuf(puf, tmp2+tmp1)
     return tmp3
 
-ser_vote = serial.Serial('COM1', 9600)   # 初始化序列通訊埠
+ser_vote = serial.Serial('COM1', 9600) 
 
 def get_candidate():
     data=""

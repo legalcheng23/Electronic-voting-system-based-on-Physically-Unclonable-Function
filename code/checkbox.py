@@ -9,25 +9,25 @@ import subprocess
 import base64
 conn = MongoClient()
 db = conn.local
-collection_vote_record = db.vote_record # 存投票結果
+collection_vote_record = db.vote_record # Save Poll Results
 collection_PUF=db.mypuf_num # 存puf
 collection_vote_record.stats
 collection_PUF.stats
-COM_PORT = 'COM4'    # 指定通訊埠名稱 uid
-BAUD_RATES = 9600    # 設定傳輸速率
-ser = serial.Serial(COM_PORT, BAUD_RATES)   # 初始化序列通訊埠
+COM_PORT = 'COM4'    # Specify the port name uid
+BAUD_RATES = 9600    # Setting the transmission rate
+ser = serial.Serial(COM_PORT, BAUD_RATES)   # Initialize the serial port
 candidate_1 = 'King Lee'
 candidate_2 = 'Teacher Huang'
 candidate_3 = 'Student Chu'
 def UID():
     try:
         while True:
-            while ser.in_waiting:          # 若收到序列資料…
-                data_raw = ser.readline()  # 讀取一行
-                data = data_raw.decode().strip()   # 用預設的UTF-8解碼
+            while ser.in_waiting:          # If serial data is received...
+                data_raw = ser.readline()  # Read a line
+                data = data_raw.decode().strip()   # Use the default UTF-8 decoding
                 return data      
     except ValueError:
-        ser.close()    # 清除序列通訊物件
+        ser.close()    # Clear serial communication objects
         print('再見！')
 
 def check():
@@ -38,7 +38,7 @@ def check():
     base64_uid=base64.b64encode(uid.encode('UTF-8'))
     check=collection_vote_record.find_one({'uid':base64_uid})
     if check is None:
-        win32api.MessageBox(0,"此用戶未投票","注意")
+        win32api.MessageBox(0,"This user has not voted","!!")
         return 0
     puf_candidate_1 = puf_vote(puf, uid, candidate_1)
     puf_candidate_2 = puf_vote(puf, uid, candidate_2)
@@ -46,11 +46,11 @@ def check():
     check_result=check["pufsupport"]
     print(check_result)
     if puf_candidate_1==check_result:
-        win32api.MessageBox(0,"您投給的是"+candidate_1,"注意")
+        win32api.MessageBox(0,"You voted for"+candidate_1,"!!")
     elif puf_candidate_2==check_result:
-        win32api.MessageBox(0,"您投給的是"+candidate_2,"注意")
+        win32api.MessageBox(0,"You voted for"+candidate_2,"!!")
     elif puf_candidate_3==check_result:
-        win32api.MessageBox(0,"您投給的是"+candidate_3,"注意")
+        win32api.MessageBox(0,"You voted for"+candidate_3,"!!")
     # print(check["pufresult"])
     
 
