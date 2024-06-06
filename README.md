@@ -1,8 +1,10 @@
 # Electronic Voting System based on Physically Unclonable Function
 
 **Authors:**  
+Hsuan-Ping Chu, Guo-Cheng Li
 
 **Date:**  
+2022/5
 
 ## Abstract
 
